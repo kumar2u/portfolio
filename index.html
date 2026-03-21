@@ -2,320 +2,653 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium et perspiciatis repudiandae laboriosam doloribus repellendus facere">    <!-- 160 -->
-
-    <link href="img/icon.png" rel="icon" type="image/x-icon" />
-    <title>Kumarjee - Frontend Developer</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <script src="https://kit.fontawesome.com/e364f7135d.js" crossorigin="anonymous"></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Professional Portfolio | Vortex Edition</title>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+   <!-- Nav -->
+   <nav class="vortex-nav">
+      <div class="container d-flex justify-content-between align-items-center">
+         <a href="#" class="nav-logo syne fw-800">
+            KUMAR<span class="gradient-text">JEE</span>
+         </a>
+         <div class="menu-toggle d-md-none" id="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+         <div class="nav-links" id="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+           
+         </div>
+          <!-- 🔥 BUTTON OUTSIDE -->
+      <a href="https://wa.me/918809575764?text=Hello%20I%20want%20to%20work%20with%20you" class="nav-cta">
+         Let's Talk
+      </a>
+   </nav>
+   <!-- Nav -->
 
-    <div id="header">
-        <div class="container">
-            <nav class="fixed">
-                <a href="#">
-                    <div class="logo">
-                     <h1><span>Kum</span>arjee<span>.</span></h1>
-                    </div>
-                </a>
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contacts">Contact</a></li>
-                    <li><i class="fas fa-times" onclick="closemenu()"></i></li>
+ 
+  
 
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>UI/UX Developer <span>(Frontend.)</span></p>
-                <h1>Hi, I'm <span>Kumarjee</span> <br> From New Delhi</h1>
+   <!-- Banner -->
+   <section class="hero-banner" id="home">
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-7 text-start" data-aos="fade-right">
+               <div class="role-pill mb-4">
+                  <span class="role-txt">GRAPHICS</span>
+                  <span class="role-dot"></span>
+                  <span class="role-txt">WEB DESIGN</span>
+                  <span class="role-dot"></span>
+                  <span class="role-txt">UI/UX</span>
+               </div>
+               <h1 class="display-1 syne mb-4 fw-800">
+                  TURNING IDEAS INTO <br>
+                  <span class="text-gradient">VISUAL REALITY</span>
+               </h1>
+               <p class="lead mb-5" style="color: #ffffff; max-width: 500px;">
+                  Professional Graphic & Web UI Designer creating modern visuals and clean user interfaces.
+               </p>
+               <div class="sketch-grid mb-5">
+                  <div class="s-box"><span>✦</span> V Storytelling</div>
+                  <div class="s-box"><span>✦</span> Modern UI/UX</div>
+                  <div class="s-box"><span>✦</span> Cinematic Edits</div>
+                  <div class="s-box"><span>✦</span> Branding & Identity
+                  </div>
+               </div>
+               <div class="d-flex gap-3">
+                  <a href="assets/pdf/Kumarjee_Kumar_CV.pdf" download="Kumarjee_Kumar_CV"
+                     class="btn-premium text-decoration-none">
+                     DOWNLOAD CV <i class="fas fa-file-download ms-2"></i>
+                  </a>
+               </div>
             </div>
-        </div>
-
-    </div>
-    <!-- About -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1"  data-aos="fade-up">
-                    <img src="img/Aboutwebp.webp" alt="aboutimg">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title text-focus-in">About Me</h1>
-                    <p>My name is <span>Kumarjee</span>, and I am an emerging <span>UI Developer (Frontend).</span> I
-                        hold an MCA degree from Amity University Online and have completed a UI Frontend Developer
-                        Certificate Course from Tech Altum Noida. Additionally, I am having Six month experience and have passionate web developer with a strong foundation in HTML, CSS, JavaScript & jQuery. I also have experience working with WordPress, Sass, Photoshop, jQuery, and Bootstrap. Throughout my journey, I have acquired a solid understanding of front-end development principles and best practices.</p>
-                    <div class="tab-title">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('contact')">Contact</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <div class="skill">
-                            <h2>HTML</h2>
-                            <div class="bar-graph">
-                                <div class="bar html" style="width: 85%;"></div>
-                                <div class="percent">85%</div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <h2>CSS</h2>
-                            <div class="bar-graph">
-                                <div class="bar css" style="width: 70%;"></div>
-                                <div class="percent">70%</div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <h2>Basic of JavaScript</h2>
-                            <div class="bar-graph">
-                                <div class="bar js" style="width: 70%;"></div>
-                                <div class="percent">70%</div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <h2>WordPress</h2>
-                            <div class="bar-graph">
-                                <div class="bar wp" style="width: 60%;"></div>
-                                <div class="percent">60%</div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <h2>Adobe Photoshop</h2>
-                            <div class="bar-graph">
-                                <div class="bar ps" style="width: 50%;"></div>
-                                <div class="percent">50%</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-contents" id="contact">
-                        <ul>
-                            <li><a href="tel:+918809575764" target="_blank"><span>Call Me</span><br><i
-                                        class="fa-solid fa-phone"></i>+91 8809575764</a></li>
-                            <li><a href="https://wa.me/918809575764" target="_blank"><span>WhatsApp</span><br><i
-                                        class="fab fab fab fab fab fab fa-whatsapp"></i>+91 8809575764</a></li>
-                            <li><a href="https://www.linkedin.com/in/kumarjeekumar/" target="_blank"><span>Linkedin
-                                    </span><br><i class="fab fab fab fab fab fa-linkedin"></i>Kumarjee Kumar</a></li>
-                            <li><a href="https://www.instagram.com/kumarjeekumar/"
-                                    target="_blank"><span>Instagram</span><br><i
-                                        class="fab fab fab fa-instagram"></i>Kumarjee</a></li>
-                            <li><a href="https://www.gmail.com" target="_blank"><span>Email</span><br> <i
-                                        class="fa far fa-envelope"></i>Kumarjee@gmail.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <!-- <li><span> <i class="fa fas fa-user-graduate"></i>MCA</span><br>Amity University Online
-                                session (2021-2023) Final Year.</li> -->
-                            <li><span> <i class="fa fas fa-user-graduate"></i>UI Frontend Developer Certificate
-                                    Course</span><br>Tech Altum Noida-2023.</li>
-                            <li><span> <i class="fa fas fa-user-graduate"></i>Graduated</span><br>Graduated in 2020 from
-                                Lalit Narayan Mithila University, Darbhanga, Bihar with 60% Mark</li>
-                            <li><span> <i class="fa fas fa-user-graduate"></i>ITI Diploma</span><br>ITI in 2017 from the
-                                State Council of Vocational Training with 84% Marks </li>
-                            <li><span> <i class="fa fas fa-user-graduate"></i>Intermediate</span><br>Intermediate in
-                                2014 from B.S.E.B, Patna with 52% Marks.</li>
-                            <li><span> <i class="fa fas fa-user-graduate"></i>Matriculation</span><br>Matriculation in
-                                2012 from B.S.E.B, Patna with 74% Marks.</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+               <div class="avatar-container">
+                  <div class="avatar-wrap-tall">
+                     <img src="img/Profile-Pic.jpg" alt="Kumarjee" class="avatar-img">
+                     <div class="stat-badge">50+ Projects</div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-    <!-- Services -->
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title abc" data-aos="fade-up">My Services</h1>
-            <div class="services-list">
-                <div data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fa-solid fa-computer"></i>
-                    <h2>Development</h2>
-                    <p>To Develop High Performing Websites which are also SEO friendly using HTML, CSS and Javascript.</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fas fa-crop-alt"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>Enhancing user experiences through thoughtful and intuitive UI/UX design solutions for digital products.</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-code"></i>
-                    <h2>PSD TO HTML</h2>
-                    <p>Transforming Photoshop templates into fully functional real-world websites with precision and expertise.</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fa fab fa-wordpress"></i>
-                    <h2>WordPress</h2>
-                    <p>Transforming Photoshop templates into fully functional real-world websites with precision and expertise.</p>
-                    <a href="#">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <button class="button active">PSD</button><button
-                class="button">Bootstrap</button><button class="button">JavaScript</button><button class="button">WordPress</button>
-            <!-- <button class="button active">All</button><button class="button">PSD</button><button
-                class="button">Bootstrap</button><button class="button">JavaScript</button><button class="button">WordPress</button> -->
+         </div>
+      </div>
+   </section>
+   <!-- Banner -->
 
-            <div class="work-list">
-                <div class="work">
-                    <img src="img/iddowebp.webp" alt="psd iddo">
-                    <div class="layer">
-                        <h3>PSD TO HTML AND CSS</h3>
-                        <p>I have created a website page using HTML, CSS, and jquery as part of a PSD to HTML conversion
-                            Here is URL This webpage.</p>
-                        <a href="https://iddopsd.netlify.app" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="img/Const.webp" alt="">
-                    <div class="layer">
-                        <h3>PSD TO HTML AND CSS</h3>
-                        <p>I have created a website page using HTML, CSS, and jquery as part of a PSD to HTML conversion Here is URL This webpage.</p>
-                        <a href="https://constpsd.netlify.app/"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="img/work-3.png" alt="">
-                    <div class="layer">
-                        <h3>PSD3</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, quas! Cupiditate porro
-                            reprehenderit ab recusandae.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="img/makebuildwebp.webp" alt="makeBootstrap">
-                    <div class="layer">
-                        <h3>Bootstrap </h3>
-                        <p>I have created a website page using Bootstrap conversion
-                            Here is URL This webpage.</p>
-                        <a href="https://bootstarp1.netlify.app/" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
 
-                </div>
-                <div class="work">
-                    <img src="img/dogwebp.webp" alt="dog">
-                    <div class="layer">
-                        <h3>Bootstrap Pet PSD Convert to Bootstrap</h3>
-                        <p>I have created a website page using Bootstrap conversion
-                            Here is URL This webpage.
+   <!-- About -->
+   <section id="about" class="resume-section py-5">
+      <div class="container">
+         <div class="text-center mb-5" data-aos="fade-up">
+            <h6 class="text-secondary mb-2" style="letter-spacing: 5px;">MY JOURNEY</h6>
+            <h2 class="display-4 fw-bold syne position-relative d-inline-block resume-head">EXPERIENCE & EDUCATION</h2>
+         </div>
+         <div class="resume-glass-card p-4 p-md-5">
+            <div class="row g-5">
+               <div class="col-lg-6" data-aos="fade-right">
+                  <div class="experience-wrap">
+                     <h3 class="display-2 fw-900 syne text-outline mb-0">03+</h3>
+                     <h4 class="h2 fw-800 mb-4">YEARS <span class="text-secondary">EXPERTISE</span></h4>
+                     <div class="exp-box-main p-4">
+                        <span class="exp-date">AUG 2023 — PRESENT</span>
+                        <h4 class="h4 fw-800 mt-2 text-white">Graphic & Web Designer</h4>
+                        <p class="text-secondary fw-700 mb-3"> CREATIVE MIND & DIGITAL CRAFTSMAN</p>
+                        <p class="text-muted small mb-4" style="color: #ffffff !important; opacity: 1;">
+                           Leading creative directions for industrial and tech brands. Specializing in high-end
+                           cinematic branding, ultra-realistic visual advertisements, and modern UI/UX layouts
+                           that convert visitors into clients.
                         </p>
-                        <a href="https://dogpsdtobootstarp.netlify.app/" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="img/WeatherAppwebp.webp" alt="WeatherApp">
-                    <div class="layer">
-                        <h3>Weather App Using Fetch API</h3>
-                        <p>I have developed a weather app webpage using HTML, CSS, and JS as part of project Here is URL
-                            This webpage</p>
-                        <a href="https://weatherapiappjs.netlify.app/" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-
-                </div>
-                <div class="work">
-
-                    <img src="img/calculatorwebp.webp" alt="calc">
-                    <div class="layer">
-                        <h3>Calculator</h3>
-                        <p>I have developed a calculator webpage using HTML, CSS, and JS as part of project Here is URL
-                            This webpage</p>
-                        <a href="https://calculator2u.netlify.app/" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-
-                </div>
-                <div class="work">
-                    <img src="img/StopWatchwebp.webp" alt="stopwatch">
-                    <div class="layer">
-                        <h3>StopWatch</h3>
-                        <p>I have developed a stopwatch webpage using HTML, CSS, and JS as part of project Here is URL
-                            This webpage</p>
-                        <a href="https://stopjswatch.netlify.app/" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="img/ecommerce.webp" alt="stopwatch">
-                    <div class="layer">
-                        <h3>Ecommerce</h3>
-                        <p>I have developed a E-commerce webpage using WordPress part of project Here is URL
-                            This webpage</p>
-                        <a href="https://e-commerceonline.netlify.app/" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="img/realeaste.webp" alt="stopwatch">
-                    <div class="layer">
-                        <h3>Real-Estate</h3>
-                        <p>I have developed a Real-easte webpage using WordPress part of project Here is URL
-                            This webpage</p>
-                        <a href="https://realestateconst.netlify.app/" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
+                        <div class="key-roles">
+                           <h5 class="small fw-800 text-white mb-3">CORE RESPONSIBILITIES:</h5>
+                           <ul class="list-unstyled small text-muted ">
+                              <li class="mb-2"><i class="fas fa-check-circle text-secondary me-2"></i> High-end UI/UX &
+                                 Web Development (Bootstrap 5, JS)</li>
+                              <li class="mb-2"><i class="fas fa-check-circle text-secondary me-2"></i> Cinematic
+                                 Branding & Industrial Product Design</li>
+                              <li class="mb-2"><i class="fas fa-check-circle text-secondary me-2"></i> Digital Strategy
+                                 & Creative Ad Campaigns</li>
+                              <li><i class="fas fa-check-circle text-secondary me-2"></i> Client-focused Branding
+                                 Frameworks (GM Framework)</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6" data-aos="fade-left">
+                  <div class="education-list">
+                     <div class="edu-card-detailed">
+                        <div class="edu-year-tag">2021 - 23</div>
+                        <div class="edu-info">
+                           <h4>MCA (Computer Applications)</h4>
+                           <div class="edu-meta-grid">
+                              <span>Board Name • 75% Marks</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="edu-card-detailed">
+                        <div class="edu-year-tag">2017 - 20</div>
+                        <div class="edu-info">
+                           <h4>Graduation Degree</h4>
+                           <div class="edu-meta-grid">
+                              <span>LNMU • 60% Marks</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="edu-card-detailed">
+                        <div class="edu-year-tag">2015 - 17</div>
+                        <div class="edu-info">
+                           <h4>ITI (FITTER)</h4>
+                           <div class="edu-meta-grid">
+                              <span>SCVT Board • 85% Marks</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="edu-card-detailed">
+                        <div class="edu-year-tag">2012 - 14</div>
+                        <div class="edu-info">
+                           <h4>Intermediate (12th)</h4>
+                           <div class="edu-meta-grid">
+                              <span>BSEB • 55% Marks</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="edu-card-detailed">
+                        <div class="edu-year-tag">2011 - 12</div>
+                        <div class="edu-info">
+                           <h4>Matriculation (10th)</h4>
+                           <div class="edu-meta-grid">
+                              <span>BSEB • 75% Marks</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <a href="#" class="btn">See More</a>
-        </div>
-    </div>
-    <!-- Contact form -->
-    <div id="contacts">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
+         </div>
+      </div>
+   </section>
+   <!-- About -->
 
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fas far fa-paper-plane"></i>Kumarjeedigital@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>8809575764</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/kumarjee12345" target="_blank"><i
-                                class="fab fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/kumarjeekumar/" target="_blank"><i
-                                class="fab fab fab fa-instagram"></i></a>
-                        <a href="https://github.com/kumar2u" target="_blank"><i
-                                class="fa fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/kumarjeekumar/" target="_blank"><i
-                                class="fab fab fab fab fab fa-linkedin"></i></a>
-                        <a href="https://wa.me/8809575764" target="_blank"><i
-                                class="fab fab fab fab fab fab fa-whatsapp"></i></a>
-                    </div>
-                     <a href="img/Kumarjee_kumar_Wordpress & Web Designing.pdf" download class="btn btn2" target="_blank">Download CV</a>
 
-                </div>
+   <!-- TOOLS & EXPERTISE -->
+   <section id="experience" class="design-stack-section py-5">
+      <div class="container py-lg-5">
+         <div class="text-center mb-5" data-aos="fade-up">
+            <h6 class="text-secondary mb-2" style="letter-spacing: 5px;">DESIGN ARMORY</h6>
+            <h2 class="display-4 fw-bold syne position-relative d-inline-block resume-head">TOOLS & EXPERTISE</h2>
+         </div>
+         <div class="resume-glass-card p-4 p-md-5">
+            <div class="row g-5 align-items-stretch">
+               <div class="col-lg-5" data-aos="fade-right">
+                  <div class="d-flex flex-column h-100">
+                     <div class="exp-simple-neat mb-4" data-aos="fade-right">
+                        <div class="row align-items-center g-0">
+                           <div class="col-auto">
+                              <h2 class="display-1 fw-900 syne text-white mb-0 line-height-1">03</h2>
+                           </div>
+                           <div class="col ps-3">
+                              <div class="h3 fw-900 text-secondary mb-0">+</div>
+                              <div class="small fw-800 text-white-50 letter-spacing-2">YEARS OF</div>
+                           </div>
+                           <div class="col-12 mt-2">
+                              <h3 class="h2 fw-900 syne text-white mb-0">DESIGN <span
+                                    class="text-secondary">EXPERTISE</span></h3>
+                              <p class="text-muted small mt-2">Crafting high-impact visuals & user-centric digital
+                                 experiences.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="exp-box-main p-4 flex-grow-1">
+                        <p class="text-white fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i> SPECIALTIES:
+                        </p>
+                        <div class="row g-2">
+                           <div class="col-6">
+                              <div class="expertise-pill">Social Media Ads</div>
+                              <div class="expertise-pill">YT Thumbnails</div>
+                              <div class="expertise-pill">UI/UX Layouts</div>
+                           </div>
+                           <div class="col-6">
+                              <div class="expertise-pill">Banner</div>
+                              <div class="expertise-pill">Infographics</div>
+                              <div class="expertise-pill">Logo & Brochure</div>
+                           </div>
+                        </div>
+                        <div class="thank-you-tag mt-4 text-center p-2">
+                           <span class="small fw-800 text-secondary">Always exploring new tools & trends</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-7" data-aos="fade-left">
+                  <div class="tools-grid-container h-100 d-flex flex-column">
+                     <h5 class="section-label mb-4 text-center">SOFTWARE & TOOLS</h5>
+                     <div class="row g-3 flex-grow-1">
+
+                        <div class="col-3">
+                           <div class="tool-card-premium ps-border">
+                              <img src="img/Photoshop.png" alt="Ps">
+                              <span>Photoshop</span>
+                           </div>
+                        </div>
+                        <div class="col-3">
+                           <div class="tool-card-premium ai-border">
+                              <img
+                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
+                                 alt="Ai">
+                              <span>Illustrator</span>
+                           </div>
+                        </div>
+                        <div class="col-3">
+                           <div class="tool-card-premium figma-border">
+                              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                 alt="Fi">
+                              <span>Figma</span>
+                           </div>
+                        </div>
+                        <div class="col-3">
+                           <div class="tool-card-premium canva-border">
+                              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
+                                 alt="Cv">
+                              <span>Canva</span>
+                           </div>
+                        </div>
+                        <div class="col-3">
+                           <div class="tool-card-premium html-border">
+                              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                 alt="HTML">
+                              <span>HTML5</span>
+                           </div>
+                        </div>
+                        <div class="col-3">
+                           <div class="tool-card-premium css-border">
+                              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                 alt="CSS">
+                              <span>CSS3</span>
+                           </div>
+                        </div>
+                        <div class="col-3">
+                           <div class="tool-card-premium bs-border">
+                              <img
+                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                 alt="BS">
+                              <span>Bootstrap</span>
+                           </div>
+                        </div>
+                        <div class="col-3">
+                           <div class="tool-card-premium mj-border">
+                              <div class="ai-icon-wrap"><i class="fas fa-wand-magic-sparkles"></i></div>
+                              <span>Midjourney</span>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
             </div>
-        </div>
-        <div class="copyright">
-            <p><a href="https://www.linkedin.com/in/kumarjeekumar/" target="_blank">Create </a>By Kumarjee</p>
-        </div>
-    </div>
-    <button class=" btntop top" aria-label="Go To Top"></button>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/script.js"></script>
+         </div>
+      </div>
+   </section>
+   <!-- TOOLS & EXPERTISE -->
+
+
+
+
+   <!-- Portfolio -->
+   <section id="portfolio" class="portfolio-section">
+      <div class="container">
+         <div class="text-center mb-5" data-aos="fade-up">
+            <h6 class="text-secondary mb-2" style="letter-spacing: 5px;">GALLERY</h6>
+            <h2 class="display-4 fw-bold syne resume-head">MY PORTFOLIO</h2>
+         </div>
+         <div class="filter-btn-group" data-aos="fade-up">
+            <button class="filter-btn active" onclick="filterWork('social', event)">Social Media</button>
+            <button class="filter-btn" onclick="filterWork('thumbnail', event)">Thumbnails</button>
+            <button class="filter-btn" onclick="filterWork('reels', event)">Reels</button>
+            <button class="filter-btn" onclick="filterWork('banner', event)">Website Banner</button>
+            <button class="filter-btn" onclick="filterWork('logo', event)">Logo & Hoarding</button>
+         </div>
+         <div class="work-grid" id="portfolioGrid">
+            <div class="work-item social">
+               <a href="img/SMP-1.webp" data-fancybox="group">
+                  <div class="ratio-1-1"><img src="img/SMP-1.webp" alt=""></div>
+               </a>
+            </div>
+            <div class="work-item social">
+               <a href="img/SMP-2.webp" data-fancybox="group">
+                  <div class="ratio-1-1"><img src="img/SMP-2.webp" alt=""></div>
+               </a>
+            </div>
+            <div class="work-item social">
+               <a href="img/SMP-3.webp" data-fancybox="group">
+                  <div class="ratio-1-1"><img src="img/SMP-3.webp" alt=""></div>
+               </a>
+            </div>
+            <div class="work-item thumbnail">
+               <a href="img/thumbnail-showcase1.webp" data-fancybox="group">
+                  <div class="ratio-16-9-2"><img src="img/thumbnail-showcase1.webp" alt=""></div>
+               </a>
+            </div>
+            <div class="work-item thumbnail">
+               <a href="img/thumbnail-showcase2.webp" data-fancybox="group">
+                  <div class="ratio-16-9-2"><img src="img/thumbnail-showcase2.webp" alt=""></div>
+               </a>
+            </div>
+            <div class="work-item thumbnail">
+               <a href="img/thumbnail-showcase3.webp" data-fancybox="group">
+                  <div class="ratio-16-9-2"><img src="img/thumbnail-showcase3.webp" alt=""></div>
+               </a>
+            </div>
+
+
+            <div class="work-item reels">
+               <a href="img/Reels-Showcase-4.webp" data-fancybox="group">
+                  <div class="ratio-9-16"><img src="img/Reels-Showcase-4.webp" alt=""></div>
+               </a>
+            </div>
+            <div class="work-item reels">
+               <a href="img/Reels-Showcase-1.webp" data-fancybox="group">
+                  <div class="ratio-9-16"><img src="img/Reels-Showcase-1.webp" alt=""></div>
+               </a>
+            </div>
+            <div class="work-item reels">
+               <a href="img/Reels-Showcase-2.webp" data-fancybox="group">
+                  <div class="ratio-9-16"><img src="img/Reels-Showcase-2.webp" alt=""></div>
+               </a>
+            </div>
+
+
+            <div class="work-item banner">
+               <a href="img/Banner-Showcase-1.webp" data-fancybox="group">
+                  <div class="ratio-16-9"><img src="img/Banner-Showcase-1.webp" alt=""></div>
+               </a>
+            </div>
+            <div class="work-item banner">
+               <a href="img/Banner-Showcase-2.webp" data-fancybox="group">
+                  <div class="ratio-16-9"><img src="img/Banner-Showcase-2.webp" alt=""></div>
+               </a>
+            </div>
+            <div class="work-item banner">
+               <a href="img/Banner-Showcase-3.webp" data-fancybox="group">
+                  <div class="ratio-16-9"><img src="img/Banner-Showcase-3.webp" alt=""></div>
+               </a>
+            </div>
+            <div class="work-item logo">
+               <a href="img/logoshowcase-1.webp" data-fancybox="group">
+                  <div class="ratio-1-1">
+                     <img src="img/logoshowcase-1.webp" alt="Minimal Logo 01">
+                  </div>
+               </a>
+            </div>
+            <div class="work-item logo">
+               <a href="img/Billboard.webp" data-fancybox="group">
+                  <div class="ratio-1-1">
+                     <img src="img/Billboard.webp" alt="Minimal Logo 02">
+                  </div>
+               </a>
+            </div>
+            <div class="work-item logo">
+               <a href="img/Billboard2.webp" data-fancybox="group">
+                  <div class="ratio-1-1">
+                     <img src="img/Billboard2.webp" alt="Minimal Logo 03">
+                  </div>
+               </a>
+            </div>
+         </div>
+         <div class="text-center mt-5">
+            <a href="#" id="showAllBtn" target="_blank" class="btn-premium">
+               SHOW ALL <span id="catName">SOCIAL MEDIA</span> WORKS
+            </a>
+         </div>
+      </div>
+   </section>
+   <!-- Portfolio -->
+
+
+
+   <!-- From -->
+   <section id="contact" class="py-5">
+      <div class="container py-lg-5">
+         <div class="row g-5 align-items-center">
+            <div class="col-lg-5" data-aos="fade-right">
+               <div class="contact-details-pillar">
+                  <h2 class="display-5 fw-900 syne text-white mb-4">Let’s <span class="text-secondary ">Connect</span>
+                  </h2>
+                  <p class="text-muted mb-5">Open for new projects and creative collaborations. Feel free to reach out
+                     through any of these channels.</p>
+                  <div class="v-list">
+                     <a href="tel:+918809575764" class="v-link">
+                        <div class="v-icon-box"><i class="fa-solid fa-phone"></i></div>
+                        <div class="v-content">
+                           <span>Call Me</span>
+                           <p>+91 8809575764</p>
+                        </div>
+                     </a>
+                     <a href="https://wa.me/918809575764" class="v-link">
+                        <div class="v-icon-box"><i class="fab fa-whatsapp"></i></div>
+                        <div class="v-content">
+                           <span>WhatsApp</span>
+                           <p>+91 8809575764</p>
+                        </div>
+                     </a>
+                     <a href="https://www.linkedin.com/in/kumarjeekumar/" class="v-link">
+                        <div class="v-icon-box"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="v-content">
+                           <span>Linkedin</span>
+                           <p>Kumarjee Kumar</p>
+                        </div>
+                     </a>
+                     <a href="https://www.instagram.com/kumarjeekumar/" class="v-link">
+                        <div class="v-icon-box"><i class="fab fa-instagram"></i></div>
+                        <div class="v-content">
+                           <span>Instagram</span>
+                           <p>@kumarjeekumar</p>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-7" data-aos="fade-left">
+               <div class="simple-form-card p-4 p-md-5">
+                  <form id="whatsappForm" onsubmit="sendToWhatsapp(event)">
+                     <div class="row g-4">
+                        <div class="col-md-6">
+                           <input type="text" id="userName" class="minimal-input" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6">
+                           <input type="email" id="userEmail" class="minimal-input" placeholder="Email Address"
+                              required>
+                        </div>
+                        <div class="col-12">
+                           <select id="userService" class="minimal-input" required>
+                              <option value="" disabled selected>Select Service You Need</option>
+                              <option value="Graphics Design">Graphics Design (Logo, Banner, Social Media)</option>
+                              <option value="Web Design">Web Design (Landing Page, Business Site)</option>
+                              <option value="UI/UX Design">UI/UX Design (App or Web Interface)</option>
+                              <option value="Branding">Full Branding & Identity</option>
+                              <option value="Other">Other Query</option>
+                           </select>
+                        </div>
+                        <div class="col-12">
+                           <input type="text" id="userSubject" class="minimal-input"
+                              placeholder="Subject / Project Title" required>
+                        </div>
+                        <div class="col-12">
+                           <textarea id="userMessage" class="minimal-input" rows="4"
+                              placeholder="Tell me more about your project..." required></textarea>
+                        </div>
+                        <div class="col-12 text-end">
+                           <button type="submit" class="simple-btn">SEND TO WHATSAPP</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- From -->
+
+   <!-- Footer -->
+
+
+   </a>
+   <footer class="py-5 mt-5">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 text-center">
+               <p class="copyright-minimal">
+                  DESIGNED BY <span class="text-white fw-bold">KUMARJEE</span>
+                  <span class="mx-2 text-secondary">|</span>
+                  © 2026 ALL RIGHTS RESERVED
+               </p>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <a href="#" id="backToTop" class="back-to-top">
+      <i class="fas fa-chevron-up"></i>
+      <!-- Footer -->
+
+      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+         AOS.init({ duration: 800, once: true });
+         Fancybox.bind("[data-fancybox]", { infinite: true });
+
+         const behanceLinks = {
+            'social': 'https://www.behance.net/gallery/221953215/Saree-Clothing-Post',
+            'thumbnail': 'https://www.behance.net/gallery/215671741/YouTube-Thumbnail-For-SEO',
+            'reels': 'https://www.behance.net/gallery/245829039/Reels-Thumbnails-Design',
+            'banner': 'https://www.behance.net/gallery/221085785/Website-Banner',
+            'logo': 'https://www.logodesign.net/logos/mover?page=2' // <--- Yahan apni asli link paste karein
+         };
+
+         // --- FIXED INITIAL LOAD ---
+         // Page load hote hi sirf social dikhayega
+         document.addEventListener("DOMContentLoaded", () => {
+            filterWork('social');
+         });
+
+         function filterWork(category, event) {
+            // Update Active Class on Buttons
+            if (event) {
+               document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+               event.target.classList.add('active');
+            }
+
+            const items = document.querySelectorAll('.work-item');
+
+            // Sabse pehle opacity 0 karo taaki exit transition dikhe
+            items.forEach(item => {
+               item.style.opacity = '0';
+               item.style.transform = 'translateY(10px) scale(0.95)';
+            });
+
+            // Thodi der baad layout change karo (Display: none/block)
+            setTimeout(() => {
+               items.forEach(item => {
+                  if (item.classList.contains(category)) {
+                     item.classList.add('active-item');
+                     // Reset opacity for active items
+                     setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0) scale(1)';
+                     }, 50);
+                  } else {
+                     item.classList.remove('active-item');
+                  }
+               });
+            }, 300);
+
+            // Update Link and Text
+            const catLabel = category.replace('-', ' ').toUpperCase();
+            document.getElementById('catName').innerText = catLabel;
+            document.getElementById('showAllBtn').href = behanceLinks[category];
+         }
+      </script>
+
+
+      <script>
+         function sendToWhatsapp(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('userName').value;
+            const email = document.getElementById('userEmail').value;
+            const service = document.getElementById('userService').value; // Dropdown value
+            const subject = document.getElementById('userSubject').value;
+            const message = document.getElementById('userMessage').value;
+
+            const phoneNumber = "918809575764";
+
+            // Dynamic format for WhatsApp
+            const whatsappMessage = `*🔥 New Creative Inquiry *%0A%0A` +
+               `*👤 Name:* ${name}%0A` +
+               `*📧 Email:* ${email}%0A` +
+               `*🛠 Service:* ${service}%0A` +
+               `*📌 Subject:* ${subject}%0A` +
+               `*💬 Message:* ${message}`;
+
+            const url = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+            window.open(url, '_blank').focus();
+         }
+      </script>
+
+
+      <script>
+         window.addEventListener('scroll', function () {
+            const btn = document.querySelector('.back-to-top');
+            if (window.scrollY > 400) {
+               btn.classList.add('show');
+               console.log("Button visible!"); // Inspect element mein check karne ke liye
+            } else {
+               btn.classList.remove('show');
+            }
+         });
+
+         document.querySelector('.back-to-top').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+         });
+
+      </script>
+       <script>
+      const toggle = document.getElementById("mobile-toggle");
+      const menu = document.getElementById("nav-menu");
+
+      toggle.addEventListener("click", function () {
+         toggle.classList.toggle("open");
+         menu.classList.toggle("active");
+      });
+
+      // Close on link click
+      document.querySelectorAll("#nav-menu a").forEach(link => {
+         link.addEventListener("click", () => {
+            toggle.classList.remove("open");
+            menu.classList.remove("active");
+         });
+      });
+   </script>
+
+
 </body>
-</html>
 
+</html>

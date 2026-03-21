@@ -1154,3 +1154,34 @@ footer {
       pointer-events: auto;
    }
 }
+/* ============================= */
+/* 🔥 FANCYBOX FINAL FIX (MOBILE + DESKTOP) */
+/* ============================= */
+
+/* Thumbnail (gallery view) */
+.work-item img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* thumbnail ke liye perfect */
+}
+
+/* 🔥 Fancybox popup image FIX */
+.fancybox__content img,
+.fancybox__image {
+   width: 100% !important;
+   height: auto !important;
+   object-fit: contain !important;
+   max-height: 90vh;
+   margin: auto;
+}
+
+/* Mobile extra fix */
+@media (max-width: 768px) {
+   .fancybox__content {
+      padding: 0 !important;
+   }
+
+   .fancybox__image {
+      max-height: 85vh;
+   }
+}

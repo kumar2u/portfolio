@@ -1124,5 +1124,13 @@ footer {
     visibility: hidden;
 }
 }
+/* Thumbnail */
+.work-item img {
+   object-fit: cover;
+}
 
+/* Popup */
+.fancybox__image {
+   object-fit: contain !important;
+}
 

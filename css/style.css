@@ -225,6 +225,8 @@ body {
 	padding: 8px 20px;
 	border-radius: 50px;
 	border: 1px solid var(--border);
+	margin-bottom:  51px;
+
 }
 
 .role-txt {

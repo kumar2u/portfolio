@@ -1125,3 +1125,15 @@ footer {
 }
 }
 
+/* Thumbnail fix */
+.work-box img {
+   width: 100%;
+   height: auto; /* 🔥 ye main fix hai */
+   object-fit: contain; /* cover hatao */
+}
+
+/* Fancybox image fix */
+.fancybox__image {
+   object-fit: contain !important;
+}
+

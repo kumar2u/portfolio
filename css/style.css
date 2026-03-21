@@ -1136,21 +1136,20 @@ footer {
 
 @media (max-width: 768px) {
 
-   /* Button ko mobile me center overlay bana do */
    .nav-cta {
       position: fixed;
-      top: 65%;
+      bottom: 80px;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       z-index: 1001;
 
       opacity: 0;
       pointer-events: none;
-      transition: 0.4s ease;
+      transition: 0.3s ease;
    }
 
-   /* Jab menu open ho tab button dikhe */
-   .nav-links.active ~ .nav-cta {
+   /* 🔥 FAST TRIGGER */
+   .nav-links.active + .nav-cta {
       opacity: 1;
       pointer-events: auto;
    }

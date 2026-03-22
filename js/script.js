@@ -1,146 +1,195 @@
-// // JavaScript
+/* ==========================================
+   1. INITIAL LOAD & AOS INITIALIZATION
+   ========================================== */
+// document.addEventListener("DOMContentLoaded", () => {
+//     // AOS (Animations) ko chalu karne ke liye
+//     AOS.init({ duration: 800, once: true });
 
-// $(document).ready(function() {
-//   $(window).on("scroll", function() {
-//     var navbar = $('nav');
-//     var scrollTop = $(window).scrollTop();
+//     // Fancybox ko initialize karne ke liye
+//     initFancybox();
 
-//     // Specify the scroll position where you want to add the class
-//     var scrollThreshold = 50;
-
-//     if (scrollTop > scrollThreshold) {
-//       navbar.addClass('scrolled fixed');
-//     } else {
-//       navbar.removeClass('scrolled fixed');
-//     }
-//   });
+//     // Page load hote hi default 'Social' works dikhane ke liye
+//     filterWork('social');
 // });
+/* ==========================================
+   1. INITIAL LOAD & AOS INITIALIZATION
+   ========================================== */
+document.addEventListener("DOMContentLoaded", () => {
+    // AOS ko initialize kiya (Mobile-friendly settings ke saath)
+    AOS.init({ 
+        duration: 800, 
+        once: true,
+        disable: false, // Isse mobile par bhi animation chalega
+        offset: 100     // Scroll karte hi thoda jaldi trigger hoga
+    });
 
-// // Toggle javascript
+    initFancybox();
+    filterWork('social');
+});
 
-// $(document).ready(function() {
-//   var $sidemenu = $("#sidemenu");
+/* ==========================================
+   2. PORTFOLIO FILTER SYSTEM
+   ========================================== */
+const behanceLinks = {
+    'social': 'https://www.behance.net/gallery/221953215/Saree-Clothing-Post',
+    'thumbnail': 'https://www.behance.net/gallery/215671741/YouTube-Thumbnail-For-SEO',
+    'reels': 'https://www.behance.net/gallery/245829039/Reels-Thumbnails-Design',
+    'banner': 'https://www.behance.net/gallery/221085785/Website-Banner',
+    'logo': 'https://www.logodesign.net/logos/mover?page=2'
+};
 
-//   function openmenu() {
-//     $sidemenu.css("right", "0px");
-//   }
+function filterWork(category, event) {
+    // Buttons par 'active' class update karne ke liye
+    if (event) {
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+    }
 
-//   function closemenu() {
-//     $sidemenu.css("right", "-200px");
-//   }
+    const items = document.querySelectorAll('.work-item');
 
-//   function hideMenuOnClick() {
-//     closemenu();
-//   }
+    // Exit Animation (Gayab hone ka effect)
+    items.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(10px) scale(0.95)';
+    });
 
-//   // Add click event listeners to open and close the sidemenu
-//   $sidemenu.on("click", hideMenuOnClick);
+    // Layout Change (Show/Hide)
+    setTimeout(() => {
+        items.forEach(item => {
+            if (item.classList.contains(category)) {
+                item.classList.add('active-item');
+                // Entrance Animation (Wapas aane ka effect)
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0) scale(1)';
+                }, 50);
+            } else {
+                item.classList.remove('active-item');
+            }
+        });
+    }, 300);
 
-//   // Add click event listeners to each navigation item
-//   $("#sidemenu li").on("click", hideMenuOnClick);
-
-//   // Add click event listener to the "hamburger" icon to open the menu
-//   $(".fa-bars").on("click", openmenu);
-// });
-
-// // Toggle javascript End
-
-// // // About Section javascript
-
-// $(document).ready(function() {
-//   function opentab(index) {
-//     $(".tab-links").removeClass("active-link");
-//     $(".tab-contents").removeClass("active-tab");
-
-//     $(".tab-links").eq(index).addClass("active-link");
-//     $(".tab-contents").eq(index).addClass("active-tab");
-//   }
-
-//   // Add click event listener to the tab links
-//   $(".tab-links").on("click", function() {
-//     var index = $(this).index();
-//     opentab(index);
-//   });
-// });
-// // // About Section javascript End
-
-
-// // This logic for Portfolio button using jQurey
-
-// // $(document).ready(function() {
-// //   var buttons = $('.button');
-// //   var works = $('.work');
-
-// //   buttons.on('click', function() {
-// //     var filter = $(this).text();
-// //     works.hide();
-
-// //     if (filter === 'All') {
-// //       works.show();
-// //     } else if (filter === 'PSD') {
-// //       works.slice(0, 3).show();
-// //     } else if (filter === 'Bootstrap') {
-// //       works.slice(3, 5).show();
-// //     } else if (filter === 'JavaScript') {
-// //       works.slice(5, 8).show();
-// //     } else if (filter === 'WordPress') {
-// //       works.slice(8, 10).show();
-// //     }
-// //   });
-// // });
-// $(document).ready(function() {
-//   var works = $('.work');
-
-//   function showWorks(startIndex, count) {
-//     works.hide();
-//     works.slice(startIndex, startIndex + count).fadeIn(500);
-//   }
-
-//   // Show 3 works by default
-//   showWorks(0, 3);
-
-//   // Handle button click events
-//   $(".button").on("click", function() {
-//     $(".button").removeClass("active");
-//     $(this).addClass("active");
-
-//     var filter = $(this).text();
-
-//     if (filter === 'PSD') {
-//       showWorks(0, 3);
-//     } else if (filter === 'Bootstrap') {
-//       showWorks(3, 2);
-//     } else if (filter === 'JavaScript') {
-//       showWorks(5, 3);
-//     } else if (filter === 'WordPress') {
-//       showWorks(8, 2);
-//     }
-//   });
-// });
+    // Bottom link aur text update karne ke liye
+    const catLabel = category.replace('-', ' ').toUpperCase();
+    document.getElementById('catName').innerText = catLabel;
+    document.getElementById('showAllBtn').href = behanceLinks[category];
+}
 
 
-// // This logic for Portfolio button using jQurey End
+/* ==========================================
+   3. FANCYBOX CONFIGURATION (Full Features)
+   ========================================== */
+function initFancybox() {
+    Fancybox.bind("[data-fancybox]", {
+        infinite: true,
+        hideScrollbar: true,
+        Navigation: true, // Side Arrows ke liye
 
+        Images: {
+            fit: "contain",
+            panMode: "drag",
+            zoom: true, // Zoom enable kiya
+        },
 
-// // // Go to top button
-// // Get the button element
-// let btn = document.querySelector('.top');
-// // Add a scroll event listener to the window
-// window.addEventListener('scroll', function() {
-//   // Check if the user has scrolled down more than 500 pixels
-//   if (window.scrollY > 100) {
-//     // If so, show the button
-//     btn.style.display = 'block';
-//   } else {
-//     // Otherwise, hide the button
-//     btn.style.display = 'none';
-//   }
-// });
+        // Toolbar mein saare features wapas add kar diye
+        Toolbar: {
+            display: {
+                left: ["infobar"], // Wo 13/15 wala counter
+                middle: [
+                    "zoom",       // Zoom karne ke liye
+                    "slideshow",  // Auto play ke liye
+                    "fullscreen", // Poori screen par dekhne ke liye
+                    "thumbs",     // Neeche saari images ki thumbnails dikhane ke liye
+                ],
+                right: ["close"], // Close button
+            },
+        },
 
-// // Add a click event listener to the button
-// btn.addEventListener('click', function() {
-//   // Scroll the page to the top
-//   window.scrollTo({ top: 0, behavior: 'smooth' });
-// });
+        Carousel: {
+            friction: 0.8,
+        }
+    });
+}
 
-// AOS.init();
+/* ==========================================
+   4. WHATSAPP CONTACT FORM LOGIC
+   ========================================== */
+function sendToWhatsapp(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('userName').value;
+    const email = document.getElementById('userEmail').value;
+    const service = document.getElementById('userService').value;
+    const subject = document.getElementById('userSubject').value;
+    const message = document.getElementById('userMessage').value;
+
+    const phoneNumber = "918809575764";
+
+    const whatsappMessage = `*🔥 New Creative Inquiry *%0A%0A` +
+        `*👤 Name:* ${name}%0A` +
+        `*📧 Email:* ${email}%0A` +
+        `*🛠 Service:* ${service}%0A` +
+        `*📌 Subject:* ${subject}%0A` +
+        `*💬 Message:* ${message}`;
+
+    const url = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+    window.open(url, '_blank').focus();
+}
+
+/* ==========================================
+   5. MOBILE MENU & BUTTON DYNAMIC SHIFT
+   ========================================== */
+const toggle = document.getElementById("mobile-toggle");
+const menu = document.getElementById("nav-menu");
+const navBtn = document.querySelector(".nav-cta"); // Tumhara asli button
+const navContainer = document.querySelector(".vortex-nav .container"); // Purani jagah
+
+if (toggle && navBtn) {
+    toggle.addEventListener("click", function () {
+        const isOpen = menu.classList.toggle("active");
+        toggle.classList.toggle("open");
+
+        if (isOpen) {
+            // 1. Mobile par: Button ko menu ke andar bhej do
+            menu.appendChild(navBtn);
+            navBtn.style.display = "flex"; 
+            document.body.style.overflow = "hidden"; // Scroll lock
+        } else {
+            // 2. Menu band: Button ko wapas header mein le aao
+            navContainer.appendChild(navBtn);
+            document.body.style.overflow = "auto";
+        }
+    });
+}
+
+// Menu ke kisi link par click ho toh sab normal kar do
+document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        toggle.classList.remove("open");
+        menu.classList.remove("active");
+        navContainer.appendChild(navBtn); // Wapas header mein bhej do
+        document.body.style.overflow = "auto";
+    });
+});
+
+/* ==========================================
+   6. BACK TO TOP BUTTON LOGIC
+   ========================================== */
+window.addEventListener('scroll', function () {
+    const btn = document.querySelector('.back-to-top');
+    if (btn) {
+        if (window.scrollY > 400) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    }
+});
+
+const backToTopBtn = document.querySelector('.back-to-top');
+if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}

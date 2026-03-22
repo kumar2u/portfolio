@@ -3,8 +3,10 @@
 
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Professional Portfolio | Vortex Edition</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+   <title>Kumarjee Portfolio | GRAPHICS - WEB DESIGN - UI/UX</title>
+
    <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=Syne:wght@700;800&display=swap"
       rel="stylesheet">
@@ -12,6 +14,7 @@
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   <link rel="icon" type="image/png" href="img/favicon.png">
    <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -34,17 +37,18 @@
             <a href="#experience">Experience</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
-           
+
          </div>
-          <!-- 🔥 BUTTON OUTSIDE -->
-      <a href="https://wa.me/918809575764?text=Hello%20I%20want%20to%20work%20with%20you" class="nav-cta">
-         Let's Talk
-      </a>
+         <!-- 🔥 BUTTON OUTSIDE -->
+         <a href="https://wa.me/918809575764?text=Hello%20I%20want%20to%20work%20with%20you" class="nav-cta"
+            target="_blank">
+            Let's Talk
+         </a>
    </nav>
    <!-- Nav -->
 
- 
-  
+
+
 
    <!-- Banner -->
    <section class="hero-banner" id="home">
@@ -252,7 +256,7 @@
                         <div class="col-3">
                            <div class="tool-card-premium ai-border">
                               <img
-                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
+                                 src="img/adove-ill.png"
                                  alt="Ai">
                               <span>Illustrator</span>
                            </div>
@@ -294,9 +298,11 @@
                            </div>
                         </div>
                         <div class="col-3">
-                           <div class="tool-card-premium mj-border">
-                              <div class="ai-icon-wrap"><i class="fas fa-wand-magic-sparkles"></i></div>
-                              <span>Midjourney</span>
+                           <div class="tool-card-premium bs-border">
+                              <img
+                                 src="img/ai-tools.png"
+                                 alt="BS">
+                              <span>AI Tools</span>
                            </div>
                         </div>
                      </div>
@@ -530,124 +536,7 @@
 
       <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
-         AOS.init({ duration: 800, once: true });
-         Fancybox.bind("[data-fancybox]", { infinite: true });
-
-         const behanceLinks = {
-            'social': 'https://www.behance.net/gallery/221953215/Saree-Clothing-Post',
-            'thumbnail': 'https://www.behance.net/gallery/215671741/YouTube-Thumbnail-For-SEO',
-            'reels': 'https://www.behance.net/gallery/245829039/Reels-Thumbnails-Design',
-            'banner': 'https://www.behance.net/gallery/221085785/Website-Banner',
-            'logo': 'https://www.logodesign.net/logos/mover?page=2' // <--- Yahan apni asli link paste karein
-         };
-
-         // --- FIXED INITIAL LOAD ---
-         // Page load hote hi sirf social dikhayega
-         document.addEventListener("DOMContentLoaded", () => {
-            filterWork('social');
-         });
-
-         function filterWork(category, event) {
-            // Update Active Class on Buttons
-            if (event) {
-               document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-               event.target.classList.add('active');
-            }
-
-            const items = document.querySelectorAll('.work-item');
-
-            // Sabse pehle opacity 0 karo taaki exit transition dikhe
-            items.forEach(item => {
-               item.style.opacity = '0';
-               item.style.transform = 'translateY(10px) scale(0.95)';
-            });
-
-            // Thodi der baad layout change karo (Display: none/block)
-            setTimeout(() => {
-               items.forEach(item => {
-                  if (item.classList.contains(category)) {
-                     item.classList.add('active-item');
-                     // Reset opacity for active items
-                     setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0) scale(1)';
-                     }, 50);
-                  } else {
-                     item.classList.remove('active-item');
-                  }
-               });
-            }, 300);
-
-            // Update Link and Text
-            const catLabel = category.replace('-', ' ').toUpperCase();
-            document.getElementById('catName').innerText = catLabel;
-            document.getElementById('showAllBtn').href = behanceLinks[category];
-         }
-      </script>
-
-
-      <script>
-         function sendToWhatsapp(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('userName').value;
-            const email = document.getElementById('userEmail').value;
-            const service = document.getElementById('userService').value; // Dropdown value
-            const subject = document.getElementById('userSubject').value;
-            const message = document.getElementById('userMessage').value;
-
-            const phoneNumber = "918809575764";
-
-            // Dynamic format for WhatsApp
-            const whatsappMessage = `*🔥 New Creative Inquiry *%0A%0A` +
-               `*👤 Name:* ${name}%0A` +
-               `*📧 Email:* ${email}%0A` +
-               `*🛠 Service:* ${service}%0A` +
-               `*📌 Subject:* ${subject}%0A` +
-               `*💬 Message:* ${message}`;
-
-            const url = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-            window.open(url, '_blank').focus();
-         }
-      </script>
-
-
-      <script>
-         window.addEventListener('scroll', function () {
-            const btn = document.querySelector('.back-to-top');
-            if (window.scrollY > 400) {
-               btn.classList.add('show');
-               console.log("Button visible!"); // Inspect element mein check karne ke liye
-            } else {
-               btn.classList.remove('show');
-            }
-         });
-
-         document.querySelector('.back-to-top').addEventListener('click', function (e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-         });
-
-      </script>
-       <script>
-      const toggle = document.getElementById("mobile-toggle");
-      const menu = document.getElementById("nav-menu");
-
-      toggle.addEventListener("click", function () {
-         toggle.classList.toggle("open");
-         menu.classList.toggle("active");
-      });
-
-      // Close on link click
-      document.querySelectorAll("#nav-menu a").forEach(link => {
-         link.addEventListener("click", () => {
-            toggle.classList.remove("open");
-            menu.classList.remove("active");
-         });
-      });
-   </script>
-
+      <script src="js/script.js"></script>
 
 </body>
 

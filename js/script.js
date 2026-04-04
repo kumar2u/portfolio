@@ -112,30 +112,54 @@ function initFancybox() {
 }
 
 /* ==========================================
-   4. WHATSAPP CONTACT FORM LOGIC
+   4. WHATSAPP CONTACT FORM LOGIC with dorop down logic with servics
+   ========================================== */
+// function sendToWhatsapp(e) {
+//     e.preventDefault();
+
+//     const name = document.getElementById('userName').value;
+//     const email = document.getElementById('userEmail').value;
+//     const service = document.getElementById('userService').value;
+//     const subject = document.getElementById('userSubject').value;
+//     const message = document.getElementById('userMessage').value;
+
+//     const phoneNumber = "918809575764";
+
+//     const whatsappMessage = `*🔥 New Creative Inquiry *%0A%0A` +
+//         `*👤 Name:* ${name}%0A` +
+//         `*📧 Email:* ${email}%0A` +
+//         `*🛠 Service:* ${service}%0A` +
+//         `*📌 Subject:* ${subject}%0A` +
+//         `*💬 Message:* ${message}`;
+
+//     const url = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+//     window.open(url, '_blank').focus();
+// }
+/* ==========================================
+   4. WHATSAPP CONTACT FORM LOGIC (Updated)
    ========================================== */
 function sendToWhatsapp(e) {
     e.preventDefault();
 
+    // Elements ko check karte hain
     const name = document.getElementById('userName').value;
     const email = document.getElementById('userEmail').value;
-    const service = document.getElementById('userService').value;
     const subject = document.getElementById('userSubject').value;
     const message = document.getElementById('userMessage').value;
 
+    // Kyunki aapne select box comment kar diya hai, 
+    // isliye humne niche wali line ko hata diya ya default set kar diya hai.
     const phoneNumber = "918809575764";
 
     const whatsappMessage = `*🔥 New Creative Inquiry *%0A%0A` +
         `*👤 Name:* ${name}%0A` +
         `*📧 Email:* ${email}%0A` +
-        `*🛠 Service:* ${service}%0A` +
         `*📌 Subject:* ${subject}%0A` +
         `*💬 Message:* ${message}`;
 
     const url = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
     window.open(url, '_blank').focus();
 }
-
 /* ==========================================
    5. MOBILE MENU & BUTTON DYNAMIC SHIFT
    ========================================== */
